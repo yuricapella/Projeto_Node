@@ -1,0 +1,12 @@
+meu-projeto/
+│
+├── public/               # Pasta para arquivos públicos
+│   ├── css/              # Folhas de estilo CSS
+│   │   └── styles.css    # Arquivo CSS principal
+│   ├── js/               # Arquivos JavaScript
+│   │   └── scripts.js     # Arquivo JavaScript principal
+│   └── index.html        # Página HTML principal
+│
+├── server.js             # Arquivo principal do servidor Node.js
+├── package.json          # Arquivo de configuração do NPM
+└── README.md             # Documentação do projeto

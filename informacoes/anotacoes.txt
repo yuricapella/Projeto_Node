@@ -1,0 +1,14 @@
+node .\server.js
+para inicializar o servidor
+
+para ver o site basta entrar em
+http://localhost:8080/
+
+Para interromper o servidor basta apertar ctrl+c no terminal.
+
+Se houver alguma alteração no projeto, deve-se interromper e inicializar novamente o servidor para ver a atualização.
+
+-----------------
+Testando a Consulta
+Para testar a consulta de usuários que será adicionada, você pode abrir o navegador e acessar a URL:
+http://localhost:8080/usuarios
