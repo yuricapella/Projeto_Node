@@ -9,19 +9,16 @@
   
   <hr>
   <h1 title="LOGIN">PAGINA DE CADASTRO</h1>
+  <form action="/auth/cadastro" method="post">
+    <label for="username">Usuário</label>
+    <input type="text" name="username" required>
+    <br>
+    <label for="password">Senha</label>
+    <input type="password" name="password" required>
+    <br>
+    <button type="submit">Registrar</button>
+  </form>
 
-  <p>Nome</p>
-  <input type="text">
-
-  <p>E-mail</p>
-  <input type="text">
-
-  <p>Senha</p>
-  <input type="text">
-
-  <p>Confirme sua senha</p>
-  <input type="text">
-  <input type="submit" title="Entrar">
   
   <p>Já possui cadastro?, clique em <a href="/login" title="Voltar">voltar</a></p>
   <hr>

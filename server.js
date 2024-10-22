@@ -1,24 +1,13 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const authRoutes = require('./public/js/auth');
-const dbConnection = require('./database/mysql_database');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Adquirindo informação do banco de dados
-app.get('/usuarios', (req, res) => {
-    dbConnection.query('SELECT * FROM usuarios', (err, results) => {
-        if (err) {
-            console.error('Erro ao executar consulta: ', err);
-            return res.status(500).send('Erro ao consultar usuários');
-        }
-        res.json(results); // Retornando os resultados como JSON
-    });
-});
 
 // Rota inicial para a pagina login
 app.get('/', (req, res) => {
@@ -31,6 +20,7 @@ app.get('/:page', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'html', `${page}.html`));
 });
 
+// Rota para Autenticação de login e cadastro
 app.use('/auth', authRoutes);
 
 const PORT = process.env.PORT || 8080;
