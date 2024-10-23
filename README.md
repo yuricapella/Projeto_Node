@@ -15,3 +15,9 @@ Um site que utiliza **Node.js**, **Express**, **EJS** e o banco de dados **MySQL
 - **Login de Usuários**: Usuários podem efetuar login utilizando seu nome de usuário e senha.
 - **Alteração de Dados do Perfil**: Usuários podem visualizar e editar seus dados pessoais.
 - **Dashboard**: Uma página onde os usuários logados podem ver suas informações.
+
+## Objetivos Futuros
+
+- Implementar testes automatizados utilizando **Robot Framework** para garantir a qualidade e estabilidade do site.
+- Expandir as funcionalidades do site, como adicionar recuperação de senha e autenticação em duas etapas.
+- Melhorar a interface do usuário com design responsivo e acessibilidade aprimorada.
