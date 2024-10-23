@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.1 on win32)" generated="2024-10-23T11:15:47.856281" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Login" source="C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\test_login.robot">
+<test id="s1-t1" name="Test Login" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:48.020244" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8080/login'.</msg>
+<arg>${URL}/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-23T11:15:48.020244" elapsed="2.329125"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:50.849437" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:50.349369" elapsed="0.500068"/>
+</kw>
+<kw name="Show Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:50.975308" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot.png"&gt;&lt;img src="tests/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T11:15:50.849437" elapsed="0.125871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:51.475403" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:50.975308" elapsed="0.500095"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-23T11:15:51.475403" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png"&gt;C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-23T11:15:51.475403" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-23T11:15:50.849437" elapsed="0.625966"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:51.475403" level="INFO">Typing text 'yuri' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>yuri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T11:15:51.475403" elapsed="0.061546"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:52.037196" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:51.536949" elapsed="0.500247"/>
+</kw>
+<kw name="Show Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:52.168059" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot.png"&gt;&lt;img src="tests/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T11:15:52.037196" elapsed="0.130863"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:52.668131" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:52.168059" elapsed="0.500072"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-23T11:15:52.668131" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png"&gt;C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-23T11:15:52.668131" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-23T11:15:52.037196" elapsed="0.630935"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:52.668131" level="INFO">Typing text 'yuri' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>yuri</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T11:15:52.668131" elapsed="0.047368"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:53.215543" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:52.715499" elapsed="0.500044"/>
+</kw>
+<kw name="Show Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:53.341394" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot.png"&gt;&lt;img src="tests/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T11:15:53.215543" elapsed="0.125851"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:53.841704" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:53.341394" elapsed="0.500310"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-23T11:15:53.841704" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png"&gt;C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-23T11:15:53.841704" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-23T11:15:53.215543" elapsed="0.626161"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:53.841704" level="INFO">Clicking button 'id=login'.</msg>
+<arg>id=login</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-23T11:15:53.841704" elapsed="0.043027"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:54.385401" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:53.885063" elapsed="0.500338"/>
+</kw>
+<kw name="Show Screenshot">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:54.508160" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="tests/screenshot.png"&gt;&lt;img src="tests/screenshot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-23T11:15:54.385401" elapsed="0.122759"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-23T11:15:55.008562" level="INFO">Slept 500 milliseconds.</msg>
+<arg>${DELAY}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-23T11:15:54.508160" elapsed="0.500402"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2024-10-23T11:15:55.008562" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png"&gt;C:\Users\yuri_\OneDrive\Área de Trabalho\salvavel\projetos\Projeto_Node\tests\screenshot.png&lt;/a&gt;'.</msg>
+<arg>${SCREENSHOT_NAME}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2024-10-23T11:15:55.008562" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-23T11:15:54.385401" elapsed="0.623161"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-10-23T11:15:55.008562" level="INFO">Current page contains text 'Você está autenticado'.</msg>
+<arg>Você está autenticado</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-10-23T11:15:55.008562" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-23T11:15:55.008562" elapsed="2.316403"/>
+</kw>
+<status status="PASS" start="2024-10-23T11:15:48.020244" elapsed="9.304721"/>
+</test>
+<status status="PASS" start="2024-10-23T11:15:47.871907" elapsed="9.453058"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Login">Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
