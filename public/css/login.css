@@ -1,0 +1,11 @@
+body {
+  font-family: 'Arial', sans-serif; 
+  background: radial-gradient(circle, #D1E9F6, #87CEFA);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  color: #000000;
+  text-align: center;
+  padding: 80px;
+  line-height: 2;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+}

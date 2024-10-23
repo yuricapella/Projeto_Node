@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/cadastro.css">
   <title>Cadastro</title>
 </head>
 <body>
   
   <hr>
-  <h1 title="LOGIN">PAGINA DE CADASTRO</h1>
+  <h1 title="CADASTRO">PAGINA DE CADASTRO</h1>
   <form action="/auth/cadastro" method="post">
+    <label for="name">Nome</label>
+    <input type="text" name="name" required>
+    <br>
+    <label for="email">Email</label>
+    <input type="text" name="email" required>
+    <br>
     <label for="username">Usuário</label>
     <input type="text" name="username" required>
     <br>

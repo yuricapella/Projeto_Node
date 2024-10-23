@@ -10,7 +10,6 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-// Testa a conexão inicial com o pool
 pool.getConnection((err, connection) => {
     if (err) {
         console.error('Erro ao conectar ao MySQL: ', err);
@@ -18,16 +17,50 @@ pool.getConnection((err, connection) => {
     }
     console.log('Conexão com MySQL bem-sucedida!');
 
-    // Executando o SELECT
-    connection.query('SELECT * FROM usuarios_table', (err, results) => {
-        connection.release(); // Libera a conexão de volta ao pool
+    const createUsuarioTableQuery = `
+        CREATE TABLE IF NOT EXISTS usuarios_table (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            name VARCHAR(255) NOT NULL,
+            email VARCHAR(255) NOT NULL UNIQUE,
+            username VARCHAR(255) NOT NULL UNIQUE,
+            password VARCHAR(255) NOT NULL
+        )
+    `;
+
+    const createPerfilTableQuery = `
+        CREATE TABLE IF NOT EXISTS perfil (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            usuarioId INT,
+            name VARCHAR(255),
+            idade INT,
+            telefone VARCHAR(15),
+            rua VARCHAR(255),
+            numero INT,
+            cidade VARCHAR(255),
+            estado VARCHAR(255),
+            cep VARCHAR(10),
+            bio TEXT,
+            email VARCHAR(255),
+            FOREIGN KEY (usuarioId) REFERENCES usuarios_table(id)
+        )
+    `;
+
+    connection.query(createUsuarioTableQuery, (err) => {
         if (err) {
-            console.error('Erro ao executar consulta: ', err);
-            return;
+            console.error('Erro ao criar tabela usuarios_table: ', err);
+        } else {
+            console.log('Tabela usuarios_table criada ou já existe.');
         }
-        console.log('Resultados: ', results); // Aqui você verá os resultados
+    });
+
+    connection.query(createPerfilTableQuery, (err) => {
+        if (err) {
+            console.error('Erro ao criar tabela perfil: ', err);
+        } else {
+            console.log('Tabela perfil criada ou já existe.');
+        }
+        connection.release();
     });
 });
 
-// Exporta o pool para ser usado em outras partes da aplicação
 module.exports = pool;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Bem-vindo ao Dashboard!</h1>
+    <p>Aqui você pode ver suas informações e métricas.</p>
+
+    <h2>Informações do Usuário</h2>
+    <p>Nome: <%= usuario.name %></p>
+    <p>Email: <%= usuario.email %></p>
+
+    <h2>Informações do Perfil</h2>
+    <p>Nome: <%= perfil.name %></p>
+    <p>Idade: <%= perfil.idade %></p>
+    <p>Email: <%= perfil.email %></p>
+    <p>Telefone: <%= perfil.telefone %></p>
+    <p>Rua: <%= perfil.rua %></p>
+    <p>Número: <%= perfil.numero %></p>
+    <p>Cidade: <%= perfil.cidade %></p>
+    <p>Estado: <%= perfil.estado %></p>
+    <p>CEP: <%= perfil.cep %></p>
+    <p>Bio: <%= perfil.bio %></p>
+</body>
+</html>

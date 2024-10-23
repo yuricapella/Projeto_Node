@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <script>
+        function habilitarEdicao() {
+            const inputs = document.querySelectorAll('.inputEdit');
+            inputs.forEach(input => input.removeAttribute('disabled'));
+            document.getElementById('btnSalvar').style.display = 'block';
+            document.getElementById('btnEditar').style.display = 'none';
+            document.getElementById('btnCancelar').style.display = 'block';
+        }
+
+        function cancelarEdicao() {
+            const inputs = document.querySelectorAll('.inputEdit');
+            inputs.forEach(input => input.setAttribute('disabled', true));
+            document.getElementById('btnSalvar').style.display = 'none';
+            document.getElementById('btnEditar').style.display = 'block';
+            document.getElementById('btnCancelar').style.display = 'none';
+        }
+
+        function apenasNumeros(event) {
+            const input = event.target;
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+    </script>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <h1>Perfil do Usuário</h1>
+
+    <form action="/auth/perfil" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" class="inputEdit" value="<%= perfil.name %>" disabled required>
+        <br>
+        
+        <label for="idade">Idade:</label>
+        <input type="number" name="idade" class="inputEdit" value="<%= perfil.idade || '' %>" disabled oninput="apenasNumeros(event)">
+        <br>
+        
+        <label for="email">Email:</label>
+        <input type="email" name="email" class="inputEdit" value="<%= perfil.email %>" disabled required>
+        <br>
+        
+        <label for="telefone">Telefone:</label>
+        <input type="text" name="telefone" class="inputEdit" value="<%= perfil.telefone || '' %>" disabled oninput="apenasNumeros(event)">
+        <br>
+        
+        <label for="rua">Rua:</label>
+        <input type="text" name="rua" class="inputEdit" value="<%= perfil.rua || '' %>" disabled>
+        <br>
+        
+        <label for="numero">Número:</label>
+        <input type="number" name="numero" class="inputEdit" value="<%= perfil.numero || '' %>" disabled oninput="apenasNumeros(event)">
+        <br>
+        
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" class="inputEdit" value="<%= perfil.cidade || '' %>" disabled>
+        <br>
+        
+        <label for="estado">Estado:</label>
+        <input type="text" name="estado" class="inputEdit" value="<%= perfil.estado || '' %>" disabled>
+        <br>
+        
+        <label for="cep">CEP:</label>
+        <input type="text" name="cep" class="inputEdit" value="<%= perfil.cep || '' %>" disabled oninput="apenasNumeros(event)">
+        <br>
+        
+        <label for="bio">Bio:</label>
+        <textarea name="bio" class="inputEdit" disabled><%= perfil.bio || '' %></textarea>
+        <br>
+        
+        <button type="button" id="btnEditar" onclick="habilitarEdicao()">Editar</button>
+        <button type="submit" id="btnSalvar" style="display: none;">Salvar Perfil</button>
+        <button type="button" id="btnCancelar" onclick="cancelarEdicao()" style="display: none;">Cancelar</button>
+    </form>
+</body>
+</html>
