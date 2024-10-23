@@ -14,4 +14,4 @@ Um site que utiliza **Node.js**, **Express**, **EJS** e o banco de dados **MySQL
 - **Registro de Usuários**: Usuários podem criar uma conta com nome, email, nome de usuário e senha.
 - **Login de Usuários**: Usuários podem efetuar login utilizando seu nome de usuário e senha.
 - **Alteração de Dados do Perfil**: Usuários podem visualizar e editar seus dados pessoais.
-- **Dashboard**: Uma página onde os usuários logados podem ver suas informações
+- **Dashboard**: Uma página onde os usuários logados podem ver suas informações.
